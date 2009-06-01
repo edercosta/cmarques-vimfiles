@@ -12,9 +12,6 @@ au BufNewFile,BufRead [rR]antfile,*.rant		set filetype=ruby
 
 " eRuby
 au BufNewFile,BufRead *.erb,*.rhtml			set filetype=eruby
-<<<<<<< HEAD:ftdetect/ruby.vim
-=======
 
 " RSelenese
 au BufNewFile,BufRead *.rsel    set filetype=ruby
->>>>>>> 0fe4e73704eb81f39ebde3589bc72690e513e846:ftdetect/ruby.vim
