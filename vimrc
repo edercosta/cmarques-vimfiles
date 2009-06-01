@@ -15,7 +15,6 @@ augroup filetypedetect
   au BufNewFile,BufRead *.liquid setf liquid
   au! BufRead,BufNewFile *.haml setfiletype haml
   autocmd BufNewFile,BufRead *.yml setf eruby
-<<<<<<< HEAD:vimrc
   autocmd BufRead,BufNewFile *.prawn set filetype=ruby
   autocmd BufRead,BufNewFile *.rsel set filetype=ruby
 augroup END
@@ -26,11 +25,9 @@ autocmd BufNewFile,BufRead *.mxml compiler flex
 au BufNewFile,BufRead *.mxml set filetype=mxml
 au BufNewFile,BufRead *.as set filetype=actionscript
 
-=======
 augroup END
  
 autocmd BufNewFile,BufRead *_test.rb source ~/.vim/ftplugin/shoulda.vim
->>>>>>> 0fe4e73704eb81f39ebde3589bc72690e513e846:vimrc
 "use \rci in normal mode to indent ruby code,should install kode ,sudo gem
 "install kode
 nmap <leader>rci :%!ruby-code-indenter<cr>
@@ -48,28 +45,21 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
-<<<<<<< HEAD:vimrc
 
 " Command for spec execution with <leader>
 let g:rubytest_cmd_spec = "spec -f specdoc %p" 
-=======
->>>>>>> 0fe4e73704eb81f39ebde3589bc72690e513e846:vimrc
  
 " Change which file opens after executing :Rails command
 let g:rails_default_file='config/database.yml'
  
 set nocompatible          " We're running Vim, not Vi!
-<<<<<<< HEAD:vimrc
-"set guifont=monaco
-set guifont=Bitstream\ Vera\ Sans\ Mono\ 9
+"set guifont=Bitstream\ Vera\ Sans\ Mono\ 9
 set guitablabel=%M%t
 set nobackup
 set noswapfile
-=======
-set guifont=monaco
+set guifont=monaco 10
 set guitablabel=%M%t
 set nobackup
->>>>>>> 0fe4e73704eb81f39ebde3589bc72690e513e846:vimrc
 set nowritebackup
 set path=$PWD/public/**,$PWD/**
 filetype plugin indent on " Enable filetype-specific indenting and plugins
@@ -85,11 +75,8 @@ imap <M-Up> :tabn<CR>
 imap <M-Down> :tabp<CR>
 imap <c-s> <esc><c-s>
 
-<<<<<<< HEAD:vimrc
 "set guioptions-=T
-=======
 set guioptions-=T
->>>>>>> 0fe4e73704eb81f39ebde3589bc72690e513e846:vimrc
 if has("gui_running")
   "tell the term has 256 colors
   set t_Co=256
@@ -103,11 +90,8 @@ endif
 
 
 if $COLORTERM == 'gnome-terminal'
-<<<<<<< HEAD:vimrc
   set term=ansi "gnome-256color
-=======
   set term=gnome-256color
->>>>>>> 0fe4e73704eb81f39ebde3589bc72690e513e846:vimrc
   colorscheme desert
 else
   colorscheme desert
