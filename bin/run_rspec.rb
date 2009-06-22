@@ -20,11 +20,7 @@ module Spec
       class HtmlFormatter
         def backtrace_line(line)
           line.gsub(/([^:]*\.rb):(\d*)/) do
-<<<<<<< HEAD:bin/run_rspec.rb
             "<a href=\"vim://#{File.expand_path($1)}?#{$2}\">#{$1}:#{$2}</a> "
-=======
-            "<a href=\"gedit://#{File.expand_path($1)}?#{$2}\">#{$1}:#{$2}</a> "
->>>>>>> 0fe4e73704eb81f39ebde3589bc72690e513e846:bin/run_rspec.rb
           end
         end
       end

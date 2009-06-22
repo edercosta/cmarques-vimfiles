@@ -4,7 +4,7 @@ In your home directory (Linux or Mac), run:
 
 <pre><code>
 mv ~/.vim ~/vim_old # backup your old .vim folder
-git clone git://github.com/akitaonrails/vimfiles.git ~/.vim
+git clone git://github.com/cassiomarques/cmarques-vimfiles.git ~/.vim
 
 mv ~/.vimrc ~/vimrc_old
 mv ~/.vim/vimrc ~/.vimrc
@@ -13,7 +13,7 @@ mv ~/.vim/vimrc ~/.vimrc
 If you're using Windows do the following under C:\Documents and Settings\Your_User
 
 <pre><code>
-git clone git://github.com/akitaonrails/vimfiles.git vimfiles
+git clone git://github.com/cassiomarques/cmarques-vimfiles.git vimfiles
 move vimfiles\vimrc _vimrc
 copy vimfiles\snippets.vim.win32 vimfiles\after\plugin\snippets.vim
 </code></pre>
