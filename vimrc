@@ -57,7 +57,7 @@ set nocompatible          " We're running Vim, not Vi!
 set guitablabel=%M%t
 set nobackup
 set noswapfile
-set guifont=monaco 10
+set guifont=Monaco:h12
 set guitablabel=%M%t
 set nobackup
 set nowritebackup
@@ -80,21 +80,21 @@ set guioptions-=T
 if has("gui_running")
   "tell the term has 256 colors
   set t_Co=256
-  colorscheme desert 
+  colorscheme ir_black 
   set lines=40
   set columns=115
 else
   let g:CSApprox_loaded = 0
-  colorscheme desert
+  colorscheme ir_black
 endif
 
 
 if $COLORTERM == 'gnome-terminal'
   set term=ansi "gnome-256color
   set term=gnome-256color
-  colorscheme desert
+  colorscheme ir_black
 else
-  colorscheme desert
+  colorscheme ir_black
 endif
 
 syntax on                 " Enable syntax highlighting
@@ -269,6 +269,11 @@ endfunction
 nnoremap <C-R> :source ~/.vimrc
 inoremap <C-R> <C-O>:source ~/.vimrc
 vnoremap <C-R> <C-C>:source ~/.vimrc
+
+"  reloads the snippets definitions
+nnoremap <C-N> :source ~/.vim/after/plugin/snipMate.vim
+inoremap <C-R> <C-O>:source ~/.vim/after/plugin/snipMate.vim
+vnoremap <C-R> <C-C>:source ~/.vim/after/plugin/snipMate.vim
 
 " CTRL-T and CTRL-D indent and unindent blocks
 inoremap <C-D> <C-O><LT><LT>
