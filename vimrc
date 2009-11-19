@@ -318,3 +318,23 @@ nmap ; :%s/\<<c-r>=expand("<cword>")<cr>\>/
 nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w<CR>a
 
+
+" Gist configs
+let g:gist_clip_command = 'pbcopy'
+let g:github_user = 'cassiomarques'
+let g:github_token = 'house2000'
+
+
+" Reload SnipMate snippets!!
+function! ReloadSnippets( snippets_dir, ft )
+    if strlen( a:ft ) == 0
+        let filetype = "_"
+    else
+        let filetype = a:ft
+    endif
+
+    call ResetSnippets()
+    call GetSnippets( a:snippets_dir, filetype )
+endfunction
+
+nmap ,rr :call ReloadSnippets(snippets_dir, &filetype)<CR>
