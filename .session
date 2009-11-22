@@ -3,29 +3,57 @@ if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/dev/surgeworks/cancao
+cd ~/dev/shh/csh-web
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 app/models/authorized_buyer.rb
-badd +5 spec/models/authorized_buyer_spec.rb
-badd +84 spec/blueprints.rb
-badd +112 config/routes.rb
-badd +90 app/models/client.rb
-badd +0 spec/models/client_spec.rb
-badd +0 app/controllers/casual_donations_controller.rb
-badd +1 app/controllers/magazine_returns_controller.rb
-badd +0 ../cancao-ecom/app/controllers/admin/option_values_controller.rb
-badd +4 app/controllers/authorized_buyers_controller.rb
-badd +0 app/controllers/donations_controller.rb
-badd +0 app/views/authorized_buyers/index.haml.html
-badd +1 app/views/donations/index.html.haml
-badd +32 app/views/authorized_buyers/index.html.haml
-badd +18 app/views/clients/_sidebar.html.haml
-args app/models/authorized_buyer.rb
+badd +0 lib/test.rb
+badd +1 config/initializers/csh_requires.rb
+badd +8 db/seeds.rb
+badd +6 lib/has_status.rb
+badd +0 spec/lib/has_status_spec.rb
+badd +10 spec/blueprints.rb
+badd +353 ../../surgeworks/cancao/spec/blueprints.rb
+badd +36 config/environments/test.rb
+badd +13 spec/spec_helper.rb
+badd +31 ../../surgeworks/cancao-ecom/config/environments/test.rb
+badd +3 ../../surgeworks/cancao-ecom/spec/spec_helper.rb
+badd +24 ../csl/lib/controllers_display_name.rb
+badd +0 script/generate
+badd +6 app/models/donation.rb
+badd +0 spec/models/donation_spec.rb
+badd +1648 db/schema.rb
+badd +36 ANTES_DE_CADA_MODULO_EM_PRODUCAO_VEJA_ESTE_ARQUIVO.txt
+badd +0 config/database.yml
+badd +136 ../../booleanize/lib/booleanize.rb
+badd +1 ../../booleanize/init.rb
+badd +2 ../csl/spec/lib/controllers_display_name_spec.rb
+badd +20 ../csl/app/models/marker.rb
+args lib/test.rb
 set lines=57 columns=235
-edit spec/models/authorized_buyer_spec.rb
+edit db/seeds.rb
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=3
+setlocal nofen
+let s:l = 8 - ((7 * winheight(0) + 28) / 57)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+8
+normal! 0
+tabedit spec/lib/has_status_spec.rb
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -46,15 +74,15 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=3
 setlocal nofen
-let s:l = 5 - ((4 * winheight(0) + 27) / 55)
+let s:l = 40 - ((39 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-5
-normal! 037l
+40
+normal! 032l
 wincmd w
 argglobal
-edit app/models/authorized_buyer.rb
+edit lib/has_status.rb
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -63,13 +91,14 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=3
 setlocal nofen
-let s:l = 1 - ((0 * winheight(0) + 27) / 55)
+let s:l = 9 - ((8 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+9
+normal! 039l
 wincmd w
+2wincmd w
 exe 'vert 1resize ' . ((&columns * 118 + 117) / 235)
 exe 'vert 2resize ' . ((&columns * 116 + 117) / 235)
 tabedit spec/blueprints.rb
@@ -87,13 +116,14 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=3
 setlocal nofen
-let s:l = 84 - ((30 * winheight(0) + 27) / 55)
+let s:l = 10 - ((9 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-84
-normal! 025l
-tabedit config/routes.rb
+10
+normal! 014l
+2wincmd w
+tabedit config/initializers/csh_requires.rb
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -108,13 +138,14 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=3
 setlocal nofen
-let s:l = 112 - ((51 * winheight(0) + 27) / 55)
+let s:l = 1 - ((0 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-112
-normal! 041l
-tabedit spec/models/client_spec.rb
+1
+normal! 019l
+2wincmd w
+tabedit spec/models/donation_spec.rb
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -135,15 +166,15 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=3
 setlocal nofen
-let s:l = 68 - ((51 * winheight(0) + 27) / 55)
+let s:l = 15 - ((14 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-68
-normal! 041l
+15
+normal! 042l
 wincmd w
 argglobal
-edit app/models/client.rb
+edit app/models/donation.rb
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -152,16 +183,17 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=3
 setlocal nofen
-let s:l = 90 - ((33 * winheight(0) + 27) / 55)
+let s:l = 6 - ((5 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-90
-normal! 02l
+6
+normal! 0
 wincmd w
+2wincmd w
 exe 'vert 1resize ' . ((&columns * 117 + 117) / 235)
 exe 'vert 2resize ' . ((&columns * 117 + 117) / 235)
-tabedit app/controllers/authorized_buyers_controller.rb
+tabedit db/schema.rb
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -176,61 +208,14 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=3
 setlocal nofen
-let s:l = 4 - ((3 * winheight(0) + 27) / 55)
+let s:l = 1648 - ((27 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-4
-normal! 021l
-tabedit app/views/donations/index.html.haml
-set splitbelow splitright
-wincmd _ | wincmd |
-split
-1wincmd k
-wincmd w
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 27 + 28) / 57)
-exe '2resize ' . ((&lines * 27 + 28) / 57)
-argglobal
-setlocal fdm=indent
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=3
-setlocal nofen
-let s:l = 41 - ((26 * winheight(0) + 13) / 27)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-41
-normal! 037l
-wincmd w
-argglobal
-edit app/views/authorized_buyers/index.html.haml
-setlocal fdm=indent
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=3
-setlocal nofen
-let s:l = 33 - ((16 * winheight(0) + 13) / 27)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-33
-normal! 0
-wincmd w
+1648
+normal! 02l
 2wincmd w
-exe '1resize ' . ((&lines * 27 + 28) / 57)
-exe '2resize ' . ((&lines * 27 + 28) / 57)
-tabedit ../cancao-ecom/app/controllers/admin/option_values_controller.rb
+tabedit config/database.yml
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -245,14 +230,14 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=3
 setlocal nofen
-let s:l = 1 - ((0 * winheight(0) + 27) / 55)
+let s:l = 38 - ((37 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+38
+normal! 017l
 2wincmd w
-tabnext 6
+tabnext 2
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
